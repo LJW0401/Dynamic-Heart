@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 Css爱心表白动画特效</title>    
+</head>
+
+<body>
+    <div class="heart">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</body>
+<style>
+	        body {
+	            margin: 0;
+	            background-color: black;
+	        }
+	        
+	        .heart {
+	            width: 200px;
+	            height: 200px;
+	            /*auto 左右自动相等 */
+	            margin: 100px auto;
+	            background-color: black;
+	            /* 播放动画 动画名称 时间 匀速 无限播放 反向 */
+	            animation: beat 1s linear infinite alternate;
+	        }
+	        /* 关键帧 */
+	        
+	        @keyframes beat {
+	            /* 开始画面 */
+	            0% {
+	                transform: scale(1);
+	            }
+	            /* 结束画面 */
+	            100% {
+	                transform: scale(1.1);
+	            }
+	        }
+	        
+	        .left,
+	        .right {
+	            width: 100px;
+	            height: 160px;
+	            float: left;
+	            background-color: pink;
+	            /* 圆角 顺时针 左上 右上 右下 左下  半径 */
+	            border-radius: 50px 50px 0 0;
+	            /* 盒子阴影 水平方向 垂直方向 模糊半径 扩展  颜色 */
+	            box-shadow: 0px 0px 20px 0px pink;
+	        }
+	        
+	        .left {
+	            /* 变换 移动 旋转 */
+	            transform: translateX(29px) rotate(-45deg);
+	        }
+	        
+	        .right {
+	            transform: translateX(-29px) rotate(45deg);
+	        }
+
+</style>
+</html>
+
